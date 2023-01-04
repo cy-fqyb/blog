@@ -65,4 +65,8 @@ module.exports = [
       },
     ],
   },
+  {
+    text: "关于本人",
+    link: "https://fengqiao-ye.gitee.io/resume/",
+  },
 ];
