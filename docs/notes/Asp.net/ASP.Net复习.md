@@ -65,4 +65,5 @@ tags:
 - 页面跳转:`Response.Redirect(“”)`
 - 判断页面是否是初次加载:`!Page.IsPostBack`
 
-###
+## 3.皮肤和母版页
+
