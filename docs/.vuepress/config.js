@@ -1,3 +1,5 @@
+const moment = require("moment");
+moment.locale("zh-cn");
 module.exports = {
   // 插件：置顶按钮、图片缩放
   plugins: [
@@ -73,11 +75,21 @@ module.exports = {
         autoCreateIssue: true,
       },
     ],
+
+    // 最后更新时间插件
+    [
+      "@vuepress/last-updated",
+      {
+        transformer: (timestamp, lang) => {
+          return moment(timestamp).format("LLLL");
+        },
+      },
+    ],
   ],
   // 自定义网站 favicon
   head: [["link", { rel: "icon", href: "/img/favicon.ico" }]],
   // 根路径，和仓库名一致
-  base: "/fqyb-blog/",
+  base: "/blog/",
   // 左上角标题
   title: "枫桥夜泊Blog",
   // markdown 相关配置
